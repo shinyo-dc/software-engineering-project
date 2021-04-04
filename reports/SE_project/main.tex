@@ -1,0 +1,352 @@
+\documentclass[a4paper,11pt]{extarticle}
+%\usepackage[english,vietnam]{babel}
+%\usepackage[utf8]{inputenc}
+\usepackage{booktabs}
+\usepackage[T1]{fontenc}
+%\usepackage[utf8]{inputenc}
+%\usepackage[francais]{babel}
+\usepackage{a4wide,amssymb,epsfig,latexsym,multicol,array,hhline,fancyhdr}
+\usepackage{tabularx} % in the preamble
+\usepackage{mathtools}
+\usepackage{listings}
+\usepackage{minted}
+\usepackage{fancyvrb}
+\usepackage{minted}
+\usepackage{amsmath}
+\usepackage{nicefrac}
+\usepackage{tabularx}
+\usepackage{lastpage}
+\usepackage[lined,boxed,commentsnumbered]{algorithm2e}
+\usepackage{color}
+\usepackage{graphicx}							% Standard graphics package
+\usepackage{array}
+\usepackage{tabularx, caption}
+\usepackage{multirow}
+\usepackage{multicol}
+\usepackage{rotating}
+\usepackage{graphics}
+\usepackage[left=3.00cm, right=2.00cm, top=2.50cm, bottom=4.00cm]{geometry}
+\usepackage{setspace}
+\usepackage{epsfig}
+\usepackage{tikz}
+\usetikzlibrary{arrows,backgrounds}
+\usepackage[unicode]{hyperref}
+\hypersetup{urlcolor=blue,linkcolor=black,citecolor=black,colorlinks=true} 
+%\usepackage{pstcol} 								% PSTricks with the standard color package
+% Table package
+\usepackage{array}
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+
+% Use case table
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand\tabularhead[2]{
+\begin{table}[htbp]
+  \caption{<<#1>>}
+  \begin{tabular}{|p{0.3\linewidth}|p{0.65\linewidth}|}
+    \hline 
+    \textbf{Name} & #1 \\
+    \hline
+    \textbf{Actor} & #2 \\
+    \hline}
+
+  \newcommand\addrow[2]{\textbf{#1} &#2\\ \hline}
+
+  \newcommand\addmulrow[2]{ \begin{minipage}[t][][t]{\linewidth}\textbf{#1}\end{minipage}% 
+     &\begin{minipage}[t][][t]{\linewidth}
+      \begin{enumerate}[wide=0pt] #2   \end{enumerate}
+      \smallskip
+      \end{minipage} \\ 
+      \hline }
+
+  \newenvironment{usecase}{\tabularhead}
+{\hline\end{tabular}\end{table}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\everymath{\color{blue}}
+\everydisplay{\color{blue}}
+\def\m@th{\normalcolor\mathsurround\z@}
+\usepackage{enumitem}
+\setlist[itemize]{noitemsep, topsep=0pt}
+\setlist[enumerate]{nosep}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\usepackage{fancyhdr}
+
+\setlength{\headheight}{40pt}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{5pt}
+\linespread{1.2}
+\pagestyle{fancy}
+\fancyhead{} % clear all header fields
+\fancyhead[L]{
+ \begin{tabular}{rl}
+    \begin{picture}(25,15)(0,0)
+    \put(0,-8){\includegraphics[width=10mm, height=10mm]{hcmut.png}}
+    %\put(0,-8){\epsfig{width=10mm,figure=hcmut.eps}}
+   \end{picture}&
+	%\includegraphics[width=8mm, height=8mm]{hcmut.png} & %
+	\begin{tabular}{l}
+		\textbf{\bf \ttfamily Ho Chi Minh City University of Technology}\\
+		\textbf{\bf \ttfamily Faculty of Computer Science \& Engineering}
+	\end{tabular} 	
+ \end{tabular}
+}
+\fancyhead[R]{
+	\begin{tabular}{l}
+		\tiny \bf \\
+		\tiny \bf 
+	\end{tabular}  }
+\fancyfoot{} % clear all footer fields
+\fancyfoot[L]{\scriptsize \ttfamily Software Engineering -  2020-2021}
+\fancyfoot[R]{\scriptsize \ttfamily Page {\thepage}/\pageref{LastPage}}
+\renewcommand{\headrulewidth}{0.3pt}
+\renewcommand{\footrulewidth}{0.3pt}
+\usepackage{datetime}
+\newdateformat{monthyeardate}{%
+  \monthname[\THEMONTH] \THEYEAR}
+
+%%%
+\setcounter{secnumdepth}{4}
+\setcounter{tocdepth}{3}
+\makeatletter
+\newcounter {subsubsubsection}[subsubsection]
+\renewcommand\thesubsubsubsection{\thesubsubsection .\@alph\c@subsubsubsection}
+\newcommand\subsubsubsection{\@startsection{subsubsubsection}{4}{\z@}%
+                                     {-3.25ex\@plus -1ex \@minus -.2ex}%
+                                     {1.5ex \@plus .2ex}%
+                                     {\normalfont\normalsize\bfseries}}
+\newcommand*\l@subsubsubsection{\@dottedtocline{3}{10.0em}{4.1em}}
+\newcommand*{\subsubsubsectionmark}[1]{}
+\makeatother
+
+%\usepackage[variablett]{lmodern}
+% \renewcommand{\rmdefault}{\ttdefault}
+% \usepackage[LGRgreek]{mathastext}
+% \MTgreekfont{lmtt} % no lgr lmvtt, so use lgr lmtt
+% \Mathastext
+% \let\varepsilon\epsilon % only \varsigma in LGR
+% \usepackage{everysel}
+% \renewcommand*\familydefault{cmtt}
+% \EverySelectfont{%
+% \fontdimen2\font=0.4em% interword space
+% \fontdimen3\font=0.2em% interword stretch
+% \fontdimen4\font=0.1em% interword shrink
+% \fontdimen7\font=0.1em% extra space
+% \hyphenchar\font=`\-% to allow hyphenation
+% }
+
+\begin{document}
+
+\begin{titlepage}
+\begin{center}
+VIETNAM NATIONAL UNIVERSITY - HO CHI MINH CITY \\
+UNIVERSITY OF TECHNOLOGY \\
+FACULTY OF COMPUTER SCIENCE \& ENGINEERING 
+\end{center}
+
+\vspace{1cm}
+
+\begin{figure}[h!]
+\begin{center}
+\includegraphics[width=4cm]{hcmut.png}
+\end{center}
+\end{figure}
+
+\vspace{1cm}
+
+
+\begin{center}
+\begin{tabular}{c}
+\multicolumn{1}{l}{\textbf{{\Large SOFTWARE ENGINEERING}}}\\
+~~\\
+\hline
+\\
+\multicolumn{1}{l}{\textbf{{\Large Project report}}}\\
+\\
+\textbf{{\Huge Restaurant POS 2.0}}\\
+\\
+\hline
+\end{tabular}
+\end{center}
+
+\vspace{1cm}
+
+\begin{table}[h]
+\begin{tabular}{rrll}
+\hspace{3 cm} & Instructor: & Assoc. Prof. Quan Thanh Tho\\
+ & Student: & Nguyen Tran Quang Minh & - 1811083 \\
+ &          & Thai Van Nhat	& - 1813381 \\
+ &          & Van Chan Duong & - 1811824\\ 
+\\
+\vspace{2cm}
+\vspace{2cm}
+\end{tabular}
+\end{table}
+
+\begin{center}
+{\footnotesize HO CHI MINH CITY,  \monthyeardate\today}
+\end{center}
+\end{titlepage}
+
+
+%\thispagestyle{empty}
+
+\newpage
+\tableofcontents
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Changelog}
+\addcontentsline{toc}{section}{Changelog}
+% ....
+\begin{tabularx}{\textwidth}{|l|l|X|l|}
+\hline
+\textbf{No.} & \textbf{Date} & \textbf{Changes} & \textbf{Actors} \\
+\hline
+1. & 2/4/2021 & "Section 1 Introduction" initialized & Van Chan Duong \\
+& & "Section 2 Functional requirements" initialized & \\
+& & "Section 3 Non-Functional requirements" initialized & \\
+\hline
+
+\end{tabularx}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Work assignment}
+\addcontentsline{toc}{section}{Work assignment}
+
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Introduction}
+Point of sale (POS) or point of purchase is the time and place where a retail transaction is completed. At the point of sale, the merchant calculates the amount owed by the customer, indicates that amount, may prepare an invoice for the customer, and indicates the options for the customer to make payment. In restaurant business, Point of sale systems enable the process of ordering food, notifying status and payment transaction.
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Functional requirements}
+
+\subsection{Functions}
+\begin{itemize}
+    \item[] \emph{Menu listing and ordering}: The restaurant's menu will be provided for the customers to choose and order their favourites dishes.
+    \item[] \emph{Order processing}: The kitchen and restaurant's staffs will be able to manage the availability of the dishes and inform the customers whenever needed.
+    \item[] \emph{Payment transaction}: The customers can choose the methods provided by the restaurant to pay for their order. 
+    \item[] \emph{Order and transaction management}: The accountant can manage orders' and transactions' information, such as dishes, date, total amount of money, and will be able to create a summary of them.
+\end{itemize}
+
+\subsection{Use case diagram}
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=1\textwidth]{general_usecase_diagram.pdf}
+    \caption{General use case diagram}
+    \label{fig:usecasediagram}
+\end{figure}
+
+\subsection{Use case description}
+\subsubsection{Menu viewing and ordering}
+\begin{usecase}{Menu viewing and ordering}{Customer}
+    \addrow{Description}{The customer can view and choose the dishes they want from the menu when they access to the system's customer's side.}
+    \addrow{Precondition}{The customer need to access to the system's customer's side through the QR code provided on each table.}
+    \addmulrow{Normal flow}{
+        \item[1.] Customers go to the menu page by QR code.
+        \item[2.] Customers browsing through the menu.
+        \item[3.] Customers choose their dishes by tapping or clicking the "Add to order list" button located at the end of each dish's frame.
+        \item[4.] After finish choosing their dishes, customers select the "Finish your order" button.
+        \item[5.] The order confirming page will appear letting the customer know the status of their dishes.
+        \item[6.] All the dishes is available and the confirming page transit to summary of the order, prompting the customer for the payment.}
+    \addmulrow{Alternative flow}{
+        \item[\emph{Alternative 1.}] At step 5 when the status of dishes changed to "NOT AVAILABLE", the customer will be prompted to choose between changing the dishes or simply removing those dishes by using the provided dialog box.
+        \begin{enumerate}[]
+            \item[1.1] If the customer want to change the dishes then the customer will be directed to the menu page and started again from step 1.
+            \item[1.2] If the customer want to remove the unavailable dishes then the system will proceed to do so.
+        \end{enumerate}
+        \item[\emph{Alternative 2.}] At the step 5, the customer receive a recommendation from the kitchen. The customer will then be prompted to choose between adding recommended dishes or keeping their order.
+        \begin{enumerate}
+            \item[2.1] If the customer want to add the dishes then the system will automatically add the dishes to the order.
+            \item[2.2] If the customer don't want to change their order then the system will proceed to do so.
+        \end{enumerate}
+        }
+\end{usecase}
+\newpage
+\subsubsubsection{Customers' main flow}
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=1.0\textwidth]{menu_viewing_ordering.png}
+    \caption{Menu viewing and ordering main flow}
+    \label{fig:my_label}
+\end{figure}
+\subsubsubsection{Mockup}
+The full mockup will be included at \texttt{Menu\_viewing\_and\_ordering.pdf} file.
+\begin{enumerate}[wide=0pt]
+    \item Menu Page:
+        \begin{figure}[htbp]
+            \centering
+            \includegraphics[width=0.6\textwidth]{menu_page.png}
+            \caption{Mock up 1: Menu page}
+            \label{fig:menu}
+        \end{figure}
+    \item Confirming Page:
+        \begin{figure}[htbp]
+            \centering
+            \includegraphics[width=0.6\textwidth]{confirming_page.png}
+            \caption{Mock up 2: Confirming page}
+            \label{fig:confirm}
+        \end{figure}
+    \item Replacing Page:
+        \begin{figure}[htbp]
+            \centering
+            \includegraphics[width=0.6\textwidth]{replacing_page.png}
+            \caption{Mock up 3: Replacing page}
+            \label{fig:replace}
+        \end{figure}
+    \item Summary Page:
+        \begin{figure}[htbp]
+            \centering
+            \includegraphics[width=0.6\textwidth]{summary_page.png}
+            \caption{Mock up 4: Summary page}
+            \label{fig:summary}
+        \end{figure}        
+\end{enumerate}
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Non-functional requirements}
+
+\subsection{Product requirements:}
+\subsubsection{Performance requirements:}
+\begin{itemize}[wide=0pt]
+    \item[-] The system should be able to handle at least 300 transactions per day.
+    \item[-] The order confirming time (from when the order is sent from the customer to when the kitchen approve its availability) should less than 5 minutes.
+    \item[-] The transaction time should not exceed 2 minutes.
+    \item[-] The system should be able to handle at least 5 simultaneously table orders.
+    \item[-] The rendering time of the system's customer's side should not exceed 3 seconds.
+\end{itemize}
+\subsubsection{Security Requirements:}
+\begin{itemize}[wide=0pt]
+    \item[-] All the transaction data should be secured and only allow to read, so that it’s protected from mischievous behaviours and also from internal attack.
+    \item[-] The customer's audit information should not be recorded or used from internal sources.
+\end{itemize}
+\subsubsection{Usability requirements:}
+\begin{itemize}[wide=0pt]
+    \item[-] The system should be functional on widely used browsers (Chrome, Safari, Firefox, Samsung Internet, Edge, Opera, UC Browser).
+    \item[-] The system should be available on usual working hours (from 8 a.m. to 10 p.m.). Downtime within working period shall not exceed 10 seconds in any one day.
+    \item[-] The customer should be able to use the system without going through any training.
+\end{itemize}
+
+\subsection{Organizational requirements:}
+\subsubsection{Operational requirements:}
+\begin{itemize}[wide=0pt]
+    \item[-] The system should be able to create non-direct interaction between the restaurant's staffs and the customers.
+    \item[-] The customers only allow to access the customer-side system using the QR code and password provided on each restaurant's table.
+    \item[-] The restaurant's staffs access to the system side using their provided ID.
+\end{itemize}
+
+\subsection{External requirements:}
+\subsubsection{Legislative requirements:}
+\begin{itemize}[wide=0pt]
+    \item[-] The invoice and information recording shall be implemented as set out in \emph{Luat Giao dich dien tu 2005}.
+\end{itemize}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{document}   
