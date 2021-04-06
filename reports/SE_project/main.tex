@@ -206,6 +206,16 @@ FACULTY OF COMPUTER SCIENCE \& ENGINEERING
 \hline
 \textbf{No.} & \textbf{Date} & \textbf{Changes} & \textbf{Actors} \\
 \hline
+3. & 6/4/2021 & "Section 2.3.2 Order processing" initialized & Thai Van Nhat \\
+\hline
+& & "Section 2.3.1 Menu viewing and ordering" updated & Van Chan Duong\\
+\hline
+2. & 4/4/2021 & "Section 3 Non-functional requirements" updated & Van Chan Duong \\
+& & "Section 2.1 Functions" updated & \\
+& & "Section 2.2 Use case diagram" updated & \\
+& & "Section 2.3.1 Menu viewing and ordering" initialized & \\
+
+\hline
 1. & 2/4/2021 & "Section 1 Introduction" initialized & Van Chan Duong \\
 & & "Section 2 Functional requirements" initialized & \\
 & & "Section 3 Non-Functional requirements" initialized & \\
@@ -279,35 +289,289 @@ Point of sale (POS) or point of purchase is the time and place where a retail tr
 \subsubsubsection{Mockup}
 The full mockup will be included at \texttt{Menu\_viewing\_and\_ordering.pdf} file.
 \begin{enumerate}[wide=0pt]
-    \item Menu Page:
-        \begin{figure}[htbp]
+    \item Menu Page: \\
+    \emph{Description:}  \\
+    \begin{tabularx}{\textwidth}{|l|p{0.14\linewidth}|p{0.25\linewidth}|p{0.09\linewidth}|p{0.065\linewidth}|l|X|}
+    \hline
+    \textbf{No.} & \textbf{Field name} & \textbf{Description} & \textbf{Control type} & \textbf{Data Type} & \textbf{Mandatory} & \textbf{Default value} \\
+    \hline
+    1. & Check button & To see the ordered dishes and their status & Button & N/A & Yes & N/A \\
+    \hline
+    2. & Filter & To filter the dishes by specific categories & List of button & N/A & No & N/A \\ 
+    \hline
+    3. & Dish info card & Display dish's info in a new page & Link box & Text, Image & Yes & N/A \\ 
+    \hline
+    4. & Add to cart button & Add the dish to the order & Button & N/A & Yes & N/A \\
+    \hline
+    
+    \end{tabularx}
+    \begin{figure}[htbp]
             \centering
-            \includegraphics[width=0.6\textwidth]{menu_page.png}
+            
+            \resizebox{0.7\textwidth}{!}{%
+
+
+\tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
+
+\begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
+%uncomment if require: \path (0,473); %set diagram left start at 0, and has height of 473
+
+%Image [id:dp3126442040850481] 
+\draw (254.94,230.84) node  {\includegraphics[width=172.41pt,height=346.25pt]{menu_page.png}};
+%Straight Lines [id:da08070854781688008] 
+\draw [color={rgb, 255:red, 255; green, 0; blue, 0 }  ,draw opacity=1 ]   (390,16) -- (377,16) -- (363,16) ;
+\draw [shift={(363,16)}, rotate = 180] [color={rgb, 255:red, 255; green, 0; blue, 0 }  ,draw opacity=1 ][fill={rgb, 255:red, 255; green, 0; blue, 0 }  ,fill opacity=1 ][line width=0.75]      (0, 0) circle [x radius= 3.35, y radius= 3.35]   ;
+%Straight Lines [id:da4471527597555851] 
+\draw [color={rgb, 255:red, 255; green, 0; blue, 0 }  ,draw opacity=1 ]   (120,60) -- (140,60) -- (164,60) ;
+\draw [shift={(164,60)}, rotate = 0] [color={rgb, 255:red, 255; green, 0; blue, 0 }  ,draw opacity=1 ][fill={rgb, 255:red, 255; green, 0; blue, 0 }  ,fill opacity=1 ][line width=0.75]      (0, 0) circle [x radius= 3.35, y radius= 3.35]   ;
+%Straight Lines [id:da5179098513663347] 
+\draw [color={rgb, 255:red, 255; green, 0; blue, 0 }  ,draw opacity=1 ]   (120,150) -- (140,150) -- (164,150) ;
+\draw [shift={(164,150)}, rotate = 0] [color={rgb, 255:red, 255; green, 0; blue, 0 }  ,draw opacity=1 ][fill={rgb, 255:red, 255; green, 0; blue, 0 }  ,fill opacity=1 ][line width=0.75]      (0, 0) circle [x radius= 3.35, y radius= 3.35]   ;
+%Straight Lines [id:da8597955221467493] 
+\draw [color={rgb, 255:red, 255; green, 0; blue, 0 }  ,draw opacity=1 ]   (120,236) -- (140,236) -- (174,236) ;
+\draw [shift={(174,236)}, rotate = 0] [color={rgb, 255:red, 255; green, 0; blue, 0 }  ,draw opacity=1 ][fill={rgb, 255:red, 255; green, 0; blue, 0 }  ,fill opacity=1 ][line width=0.75]      (0, 0) circle [x radius= 3.35, y radius= 3.35]   ;
+
+% Text Node
+\draw (391,7) node [anchor=north west][inner sep=0.75pt]  [font=\normalsize,color={rgb, 255:red, 255; green, 0; blue, 0 }  ,opacity=1 ] [align=left] {1.};
+% Text Node
+\draw (105,51) node [anchor=north west][inner sep=0.75pt]  [font=\normalsize,color={rgb, 255:red, 255; green, 0; blue, 0 }  ,opacity=1 ] [align=left] {2.};
+% Text Node
+\draw (105,141) node [anchor=north west][inner sep=0.75pt]  [font=\normalsize,color={rgb, 255:red, 255; green, 0; blue, 0 }  ,opacity=1 ] [align=left] {3.};
+% Text Node
+\draw (104,226) node [anchor=north west][inner sep=0.75pt]  [font=\normalsize,color={rgb, 255:red, 255; green, 0; blue, 0 }  ,opacity=1 ] [align=left] {4.};
+
+
+\end{tikzpicture}
+
+
+            }%
             \caption{Mock up 1: Menu page}
             \label{fig:menu}
         \end{figure}
-    \item Confirming Page:
+        
+    \newpage
+    
+    \item Dish info page: \\
         \begin{figure}[htbp]
             \centering
-            \includegraphics[width=0.6\textwidth]{confirming_page.png}
-            \caption{Mock up 2: Confirming page}
-            \label{fig:confirm}
+            
+            \resizebox{0.7\textwidth}{!}{%
+                \tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
+                \begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
+                %uncomment if require: \path (0,614); %set diagram left start at 0, and has height of 614
+                %Image [id:dp2943344730018669] 
+                \draw (254.94,230.84) node  {\includegraphics[width=172.41pt,height=346.25pt]{dishinfo_page.png}};
+                %Straight Lines [id:da4982441404610163] 
+                \draw [color={rgb, 255:red, 255; green, 0; blue, 0 }  ,draw opacity=1 ]   (387,16) -- (374,16) -- (360,16) ;
+                \draw [shift={(360,16)}, rotate = 180] [color={rgb, 255:red, 255; green, 0; blue, 0 }  ,draw opacity=1 ][fill={rgb, 255:red, 255; green, 0; blue, 0 }  ,fill opacity=1 ][line width=0.75]      (0, 0) circle [x radius= 3.35, y radius= 3.35]   ;
+                %Straight Lines [id:da37852756129422205] 
+                \draw [color={rgb, 255:red, 255; green, 0; blue, 0 }  ,draw opacity=1 ]   (117,60) -- (137,60) -- (170,60) ;
+                \draw [shift={(170,60)}, rotate = 0] [color={rgb, 255:red, 255; green, 0; blue, 0 }  ,draw opacity=1 ][fill={rgb, 255:red, 255; green, 0; blue, 0 }  ,fill opacity=1 ][line width=0.75]      (0, 0) circle [x radius= 3.35, y radius= 3.35]   ;
+                %Straight Lines [id:da380524097945073] 
+                \draw [color={rgb, 255:red, 255; green, 0; blue, 0 }  ,draw opacity=1 ]   (117,150) -- (137,150) -- (170,150) ;
+                \draw [shift={(170,150)}, rotate = 0] [color={rgb, 255:red, 255; green, 0; blue, 0 }  ,draw opacity=1 ][fill={rgb, 255:red, 255; green, 0; blue, 0 }  ,fill opacity=1 ][line width=0.75]      (0, 0) circle [x radius= 3.35, y radius= 3.35]   ;
+                %Straight Lines [id:da4363952196339391] 
+                \draw [color={rgb, 255:red, 255; green, 0; blue, 0 }  ,draw opacity=1 ]   (120,230) -- (140,230) -- (190,230) ;
+                \draw [shift={(190,230)}, rotate = 0] [color={rgb, 255:red, 255; green, 0; blue, 0 }  ,draw opacity=1 ][fill={rgb, 255:red, 255; green, 0; blue, 0 }  ,fill opacity=1 ][line width=0.75]      (0, 0) circle [x radius= 3.35, y radius= 3.35]   ;
+                
+                % Text Node
+                \draw (388,7) node [anchor=north west][inner sep=0.75pt]  [font=\normalsize,color={rgb, 255:red, 255; green, 0; blue, 0 }  ,opacity=1 ] [align=left] {5.};
+                % Text Node
+                \draw (102,51) node [anchor=north west][inner sep=0.75pt]  [font=\normalsize,color={rgb, 255:red, 255; green, 0; blue, 0 }  ,opacity=1 ] [align=left] {6.};
+                % Text Node
+                \draw (102,141) node [anchor=north west][inner sep=0.75pt]  [font=\normalsize,color={rgb, 255:red, 255; green, 0; blue, 0 }  ,opacity=1 ] [align=left] {7.};
+                % Text Node
+                \draw (101,221) node [anchor=north west][inner sep=0.75pt]  [font=\normalsize,color={rgb, 255:red, 255; green, 0; blue, 0 }  ,opacity=1 ] [align=left] {8.};
+                \end{tikzpicture}
+            }%
+            \caption{Mock up 2: Dish info page}
+            \label{fig:dishinfo}
         \end{figure}
-    \item Replacing Page:
+    \newpage
+    \emph{Description:}  \\
+    \begin{tabularx}{\textwidth}{|l|p{0.14\linewidth}|p{0.25\linewidth}|p{0.09\linewidth}|p{0.065\linewidth}|l|X|}
+        \hline
+        \textbf{No.} & \textbf{Field name} & \textbf{Description} & \textbf{Control type} & \textbf{Data Type} & \textbf{Mandatory} & \textbf{Default value} \\
+        \hline
+        5. & Check button & To see the ordered dishes and their status & Button & N/A & Yes & N/A \\
+        \hline
+        6. & Return button & Return to the menu page & Button & N/A & Yes & N/A \\ 
+        \hline
+        7. & Dish info card & Display detailed dish's info & Box & Text, Image & Yes & N/A \\ 
+        \hline
+        8. & Add to cart button & Add the dish to the order & Button & N/A & Yes & N/A \\
+        \hline
+    \end{tabularx} 
+    \\
+    \item Order review page: \\
+    \emph{Description:}  \\
+    \begin{tabularx}{\textwidth}{|l|p{0.14\linewidth}|p{0.25\linewidth}|p{0.09\linewidth}|p{0.065\linewidth}|l|X|}
+        \hline
+        \textbf{No.} & \textbf{Field name} & \textbf{Description} & \textbf{Control type} & \textbf{Data Type} & \textbf{Mandatory} & \textbf{Default value} \\
+        \hline
+        9. & Next button & To confirm the order and see the order's summary & Button & N/A & Yes & N/A \\
+        \hline
+        11. & Kebab menu button & To open a menu with "Replace" and "Remove" dish option  & Button & N/A & Yes & N/A \\ 
+        \hline
+        12. & Dish info card & Display dish's status and allow to change the dish's number of portion & Box & Text, Button & Yes & N/A \\ 
+        \hline
+        13. & Not available dish field & Prompt the customers to change or remove the unavailable dish & Box & Text, Button & Yes & N/A \\
+        \hline
+        14. & Recommend dishes field & Prompt the customers if they want to add the recommended dishes or not & Box & Text, Button & Yes & N/A \\
+        \hline
+    \end{tabularx}
+    
         \begin{figure}[htbp]
             \centering
-            \includegraphics[width=0.6\textwidth]{replacing_page.png}
-            \caption{Mock up 3: Replacing page}
-            \label{fig:replace}
+            \resizebox{0.7\textwidth}{!}{%
+                \tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
+                
+                \begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
+                %uncomment if require: \path (0,500); %set diagram left start at 0, and has height of 500
+                
+                %Image [id:dp41692429085977345] 
+                \draw (254.94,230.84) node  {\includegraphics[width=172.41pt,height=346.25pt]{confirming_page.png}};
+                %Straight Lines [id:da3098508428933635] 
+                \draw [color={rgb, 255:red, 255; green, 0; blue, 0 }  ,draw opacity=1 ]   (387,16) -- (374,16) -- (360,16) ;
+                \draw [shift={(360,16)}, rotate = 180] [color={rgb, 255:red, 255; green, 0; blue, 0 }  ,draw opacity=1 ][fill={rgb, 255:red, 255; green, 0; blue, 0 }  ,fill opacity=1 ][line width=0.75]      (0, 0) circle [x radius= 3.35, y radius= 3.35]   ;
+                %Straight Lines [id:da7368719099511032] 
+                \draw [color={rgb, 255:red, 255; green, 0; blue, 0 }  ,draw opacity=1 ]   (390,60) -- (370,60) -- (343,60) ;
+                \draw [shift={(343,60)}, rotate = 180] [color={rgb, 255:red, 255; green, 0; blue, 0 }  ,draw opacity=1 ][fill={rgb, 255:red, 255; green, 0; blue, 0 }  ,fill opacity=1 ][line width=0.75]      (0, 0) circle [x radius= 3.35, y radius= 3.35]   ;
+                %Straight Lines [id:da7060081098703315] 
+                \draw [color={rgb, 255:red, 255; green, 0; blue, 0 }  ,draw opacity=1 ]   (117,90) -- (137,90) -- (170,90) ;
+                \draw [shift={(170,90)}, rotate = 0] [color={rgb, 255:red, 255; green, 0; blue, 0 }  ,draw opacity=1 ][fill={rgb, 255:red, 255; green, 0; blue, 0 }  ,fill opacity=1 ][line width=0.75]      (0, 0) circle [x radius= 3.35, y radius= 3.35]   ;
+                %Straight Lines [id:da5663028475363252] 
+                \draw [color={rgb, 255:red, 255; green, 0; blue, 0 }  ,draw opacity=1 ]   (120,280) -- (140,280) -- (180,280) ;
+                \draw [shift={(180,280)}, rotate = 0] [color={rgb, 255:red, 255; green, 0; blue, 0 }  ,draw opacity=1 ][fill={rgb, 255:red, 255; green, 0; blue, 0 }  ,fill opacity=1 ][line width=0.75]      (0, 0) circle [x radius= 3.35, y radius= 3.35]   ;
+                %Straight Lines [id:da7836308850119804] 
+                \draw [color={rgb, 255:red, 255; green, 0; blue, 0 }  ,draw opacity=1 ]   (387,36) -- (340,36) -- (330,20) ;
+                \draw [shift={(330,20)}, rotate = 237.99] [color={rgb, 255:red, 255; green, 0; blue, 0 }  ,draw opacity=1 ][fill={rgb, 255:red, 255; green, 0; blue, 0 }  ,fill opacity=1 ][line width=0.75]      (0, 0) circle [x radius= 3.35, y radius= 3.35]   ;
+                %Straight Lines [id:da5639527194471947] 
+                \draw [color={rgb, 255:red, 255; green, 0; blue, 0 }  ,draw opacity=1 ]   (390,410) -- (370,410) -- (333,410) ;
+                \draw [shift={(333,410)}, rotate = 180] [color={rgb, 255:red, 255; green, 0; blue, 0 }  ,draw opacity=1 ][fill={rgb, 255:red, 255; green, 0; blue, 0 }  ,fill opacity=1 ][line width=0.75]      (0, 0) circle [x radius= 3.35, y radius= 3.35]   ;
+                
+                % Text Node
+                \draw (388,7) node [anchor=north west][inner sep=0.75pt]  [font=\normalsize,color={rgb, 255:red, 255; green, 0; blue, 0 }  ,opacity=1 ] [align=left] {9.};
+                % Text Node
+                \draw (391,51) node [anchor=north west][inner sep=0.75pt]  [font=\normalsize,color={rgb, 255:red, 255; green, 0; blue, 0 }  ,opacity=1 ] [align=left] {11.};
+                % Text Node
+                \draw (96,81) node [anchor=north west][inner sep=0.75pt]  [font=\normalsize,color={rgb, 255:red, 255; green, 0; blue, 0 }  ,opacity=1 ] [align=left] {12.};
+                % Text Node
+                \draw (99,272) node [anchor=north west][inner sep=0.75pt]  [font=\normalsize,color={rgb, 255:red, 255; green, 0; blue, 0 }  ,opacity=1 ] [align=left] {13.};
+                % Text Node
+                \draw (388,27) node [anchor=north west][inner sep=0.75pt]  [font=\normalsize,color={rgb, 255:red, 255; green, 0; blue, 0 }  ,opacity=1 ] [align=left] {10.};
+                % Text Node
+                \draw (391,401) node [anchor=north west][inner sep=0.75pt]  [font=\normalsize,color={rgb, 255:red, 255; green, 0; blue, 0 }  ,opacity=1 ] [align=left] {14.};
+                
+                
+                \end{tikzpicture}
+            }%
+            \caption{Mock up 3: Order review page}
+            \label{fig:reviewing}
         \end{figure}
-    \item Summary Page:
+    \newpage
+    \item Dish changing page: \\
+    \begin{figure}[htbp]
+            \centering
+            \resizebox{0.7\textwidth}{!}{%
+                \tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
+                
+                \begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
+                %uncomment if require: \path (0,627); %set diagram left start at 0, and has height of 627
+                
+                %Image [id:dp6317308650333988] 
+                \draw (254.94,229.16) node  {\includegraphics[width=172.41pt,height=346.25pt]{replacing_page.png}};
+                %Straight Lines [id:da7705543671147561] 
+                \draw [color={rgb, 255:red, 255; green, 0; blue, 0 }  ,draw opacity=1 ]   (390,14.33) -- (377,14.33) -- (363,14.33) ;
+                \draw [shift={(363,14.33)}, rotate = 180] [color={rgb, 255:red, 255; green, 0; blue, 0 }  ,draw opacity=1 ][fill={rgb, 255:red, 255; green, 0; blue, 0 }  ,fill opacity=1 ][line width=0.75]      (0, 0) circle [x radius= 3.35, y radius= 3.35]   ;
+                %Straight Lines [id:da8027898862374145] 
+                \draw [color={rgb, 255:red, 255; green, 0; blue, 0 }  ,draw opacity=1 ]   (120,58.33) -- (137,58.33) -- (161,58.33) ;
+                \draw [shift={(161,58.33)}, rotate = 0] [color={rgb, 255:red, 255; green, 0; blue, 0 }  ,draw opacity=1 ][fill={rgb, 255:red, 255; green, 0; blue, 0 }  ,fill opacity=1 ][line width=0.75]      (0, 0) circle [x radius= 3.35, y radius= 3.35]   ;
+                %Straight Lines [id:da2738354007738477] 
+                \draw [color={rgb, 255:red, 255; green, 0; blue, 0 }  ,draw opacity=1 ]   (390,231.33) -- (357,231.33) -- (325,231.33) ;
+                \draw [shift={(325,231.33)}, rotate = 180] [color={rgb, 255:red, 255; green, 0; blue, 0 }  ,draw opacity=1 ][fill={rgb, 255:red, 255; green, 0; blue, 0 }  ,fill opacity=1 ][line width=0.75]      (0, 0) circle [x radius= 3.35, y radius= 3.35]   ;
+                
+                % Text Node
+                \draw (391,5.33) node [anchor=north west][inner sep=0.75pt]  [font=\normalsize,color={rgb, 255:red, 255; green, 0; blue, 0 }  ,opacity=1 ] [align=left] {15.};
+                % Text Node
+                \draw (100,50.33) node [anchor=north west][inner sep=0.75pt]  [font=\normalsize,color={rgb, 255:red, 255; green, 0; blue, 0 }  ,opacity=1 ] [align=left] {16.};
+                % Text Node
+                \draw (395,222) node [anchor=north west][inner sep=0.75pt]  [font=\normalsize,color={rgb, 255:red, 255; green, 0; blue, 0 }  ,opacity=1 ] [align=left] {17.};
+                
+                
+                \end{tikzpicture}
+            }%
+            \caption{Mock up 4: Dish change page}
+            \label{fig:changing}
+        \end{figure}
+        \newpage
+    \emph{Description:}  \\
+    \begin{tabularx}{\textwidth}{|l|p{0.14\linewidth}|p{0.25\linewidth}|p{0.09\linewidth}|p{0.065\linewidth}|l|X|}
+        \hline
+        \textbf{No.} & \textbf{Field name} & \textbf{Description} & \textbf{Control type} & \textbf{Data Type} & \textbf{Mandatory} & \textbf{Default value} \\
+        \hline
+        15. & Back button & To return to the order review page & Button & N/A & Yes & N/A \\
+        \hline
+        16. & Filter & To filter the dishes by specific categories & List of button & N/A & No & N/A \\ 
+        \hline
+        17. & Replace button & To replace the dish issued the "Replace" or "Change" command & Button & Button & Yes & N/A \\ 
+        \hline
+    \end{tabularx} \\
+   \item Summary page: \\
+    \emph{Description:}  \\
+    \begin{tabularx}{\textwidth}{|l|p{0.14\linewidth}|p{0.25\linewidth}|p{0.09\linewidth}|p{0.065\linewidth}|l|X|}
+        \hline
+        \textbf{No.} & \textbf{Field name} & \textbf{Description} & \textbf{Control type} & \textbf{Data Type} & \textbf{Mandatory} & \textbf{Default value} \\
+        \hline
+        18. & Dish summary card & Display dishes' summary and total price & Box & Text & Yes & N/A \\
+        \hline
+        19. & Checkout button & To checkout and enter the select payment method section & Button & N/A & Yes & N/A \\ 
+        \hline
+    \end{tabularx}
+    
         \begin{figure}[htbp]
             \centering
-            \includegraphics[width=0.6\textwidth]{summary_page.png}
-            \caption{Mock up 4: Summary page}
+            \resizebox{0.7\textwidth}{!}{%
+                \tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
+                
+                \begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
+                %uncomment if require: \path (0,627); %set diagram left start at 0, and has height of 627
+                
+                %Image [id:dp017841253496055476] 
+                \draw (254.94,229.16) node  {\includegraphics[width=172.41pt,height=346.25pt]{summary_page.png}};
+                %Straight Lines [id:da6794045011278274] 
+                \draw [color={rgb, 255:red, 255; green, 0; blue, 0 }  ,draw opacity=1 ]   (120,88.33) -- (137,88.33) -- (171,88.33) ;
+                \draw [shift={(171,88.33)}, rotate = 0] [color={rgb, 255:red, 255; green, 0; blue, 0 }  ,draw opacity=1 ][fill={rgb, 255:red, 255; green, 0; blue, 0 }  ,fill opacity=1 ][line width=0.75]      (0, 0) circle [x radius= 3.35, y radius= 3.35]   ;
+                %Straight Lines [id:da1807773273225548] 
+                \draw [color={rgb, 255:red, 255; green, 0; blue, 0 }  ,draw opacity=1 ]   (390,391.33) -- (357,391.33) -- (325,391.33) ;
+                \draw [shift={(325,391.33)}, rotate = 180] [color={rgb, 255:red, 255; green, 0; blue, 0 }  ,draw opacity=1 ][fill={rgb, 255:red, 255; green, 0; blue, 0 }  ,fill opacity=1 ][line width=0.75]      (0, 0) circle [x radius= 3.35, y radius= 3.35]   ;
+                
+                % Text Node
+                \draw (100,80.33) node [anchor=north west][inner sep=0.75pt]  [font=\normalsize,color={rgb, 255:red, 255; green, 0; blue, 0 }  ,opacity=1 ] [align=left] {18.};
+                % Text Node
+                \draw (395,382) node [anchor=north west][inner sep=0.75pt]  [font=\normalsize,color={rgb, 255:red, 255; green, 0; blue, 0 }  ,opacity=1 ] [align=left] {19.};
+                
+                
+                \end{tikzpicture}
+            }%
+            \caption{Mock up 5: Summary page}
             \label{fig:summary}
-        \end{figure}        
+        \end{figure}
+    \newpage
 \end{enumerate}
+
+\newpage
+\subsubsection{Order Processing}
+\begin{usecase}{Order processing}{Kitchen and Restaurant's staff}
+    \addrow{Description}{The kitchen and restaurant's staff can manage all order information from the customers. }
+    \addrow{Precondition}{}
+    \addmulrow{Normal flow}{
+        \item[1.] tbd
+    }
+    \addmulrow{Alternative flow}{
+        \item[\emph{Alternative 1.}] tbd
+        }
+\end{usecase}
 \newpage
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
